@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#task-input, #deadline-input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.completed-task {
+    text-decoration: line-through; /* Add a line-through style for completed tasks */
+    opacity: 0.7; /* Optionally reduce opacity for completed tasks */
+}
+
+/* Larger checkbox */
+.task-actions input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    #task-input, #deadline-input {
+        width: 100%;
+    }
+}
